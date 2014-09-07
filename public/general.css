@@ -1,0 +1,29 @@
+body {
+	margin: 0 auto;
+	background: #FFA46D;
+	font-family: 'Roboto Condensed', sans-serif;
+	/*cursor: pointer;*/
+	font-size: 1em;
+	line-height: 1.5;
+	text-align: center;
+}
+
+img {
+	max-width: 100%;
+}
+
+strong {
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 1.3em;
+}
+
+p {
+	margin: 1.5em 0;
+}
+
+.wrapper {
+	margin: 2% 5%;
+}

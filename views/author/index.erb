@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+    <title>Micro Blog</title>
+</head>
+<body>
+    <header class="group">
+        <h1><a href="/feed">WDI micro BLOG</a></h1>    <nav class="group">
+                <ul>
+                    <li><a href="/feed">Home</a></li>
+                    <li><a href="/authors">Authors</a></li>
+                    <li><a href="/subscribe">Subscribe</a></li>
+                </ul>
+            </nav>        
+    </header>
+    <div class="wrapper">
+        <div class="banner">
+            <h2>Searched by <%= Author.find_by(id: posts[0].author_id).name %></h2>
+        </div>
+        <div class="list">
+            <ul>
+                <% posts.each do |post| %>
+                    <li><h3><a href="/posts/<%= post.id %>"><%= post.title %></a></h3> <a href="/tag/<%= post.tag_name %>/posts"><span style="color: #E96462">#<%= post.tag_name %></span></a></li>
+                <% end %>
+            </ul>
+        </div>
+        <footer>
+            <a href="/feed">Go back</a>
+        </footer>
+    </div>
+</body>
+</html>

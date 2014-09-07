@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+	<meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+	<title>Micro Blog</title>
+</head>
+<body>
+    <header class="group">
+        <h1><a href="/feed">WDI micro BLOG</a></h1>
+            <nav class="group">
+                <ul>
+                    <li><a href="/feed">Home</a></li>
+                    <li><a href="/authors">Authors</a></li>
+                    <li><a href="/subscribe">Subscribe</a></li>
+                </ul>
+            </nav>        
+        </header>
+    <div class="wrapper">
+        <div class="banner">
+            <h2>Submit Your Post!</h2>
+ 　　　　</div>
+        <form action="/feed" method="POST">
+		  　<p>Author: 
+                <select name="author">
+                    <option></option>    
+                    <% authors.each do |author|%>
+                        <option value="<%= author.name %>"><%= author.name%></option>
+                    <% end %> 
+                </select>
+    	    </p>
+    	    <p>Title:
+    		    <input type="text" name="title" placeholder="Title">
+            </p>    
+    	    <p>Hastag:    
+            <input type="text" name="tag" placeholder="Hashtag">
+    	    </p>
+    	    <p>
+    	        <textarea name="content" rows="5" cols="70">Write something here</textarea>
+    	    </p>
+    	    <button>Post</button>
+	    </form>
+        <footer>
+        </footer>    
+    </div>
+</body>
+</html>

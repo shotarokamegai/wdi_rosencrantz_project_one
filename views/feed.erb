@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+	<meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+	<title>Micro Blog</title>
+</head>
+<body>
+    <header class="group">
+        <h1><a href="/feed">WDI micro BLOG</a></h1>
+            <nav class="group">
+                <ul>
+                    <li><a href="/feed">Home</a></li>
+                    <li><a href="/authors">Authors</a></li>
+                    <li><a href="/subscribe">Subscribe</a></li>
+                </ul>
+            </nav>        
+    </header>
+    <div class="wrapper">
+        <div class="banner">
+            <h2>Submit your post about WDI experience!</h2>
+        </div>
+        <div class="submit group">
+            <div class="group" id="heading">
+                <p>Add an author here: 
+                    <form action="/feed/:add_author/add_author" method="POST" id="add_author">
+                        <input type="text" name="add_author" placeholder="Add new author">
+                        <button>Add</button>
+                    </form>
+                </p> 
+                Or select an author from a dropbox:
+	            <form action="/feed" method="POST">
+		        Author: 
+                    <select name="author">
+                        <option></option>    
+                            <% authors.each do |author|%>
+                                <option value="<%= author.name %>"><%= author.name%></option>
+                            <% end %> 
+                    </select>
+    	        <p>Title:
+    		        <input type="text" name="title" placeholder="Title"></p>
+    	        <p>Hashtag:    
+                    <input type="text" name="tag" placeholder="Hashtag">
+    	        </p>   
+            </div>
+            <div class="group "id="body">
+    	       <p>
+    	           <textarea name="content" rows="5" cols="70">Write something here</textarea><button>Post</button>
+    	       </p>
+	           </form>
+            </div>
+        </article>
+        </div>
+        <div class="timeline group">
+            <ul>
+                <% posts.each do |post| %>
+                    <div class="post">
+                        <li><h3><a href="/posts/<%= post.id %>"><%= post.title %></a></h3> <a href="/tag/<%= post.tag_name %>/posts"><span style="color: #E96462">#<%= post.tag_name %></span></a><br />
+                         By: <a href="/authors/<%= post.author_id %>/posts"><%= Author.find_by(id: post.author_id).name %></a>
+                        <form action="/reblog/<%= post.id %>" method="GET">
+                            <button>Reblog</button>
+                        </form>
+                        <a href="/post/<%= post.id %>/edit"><button>Edit</button></a>
+                        <form action="/post/<%= post.id %>/delete" method="POST">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button>Delete</button>
+                        </form>
+                        </li>
+                    </div>
+                <% end %>
+            </ul>
+        </div>
+        <footer>
+            <a href="/subscribe">Click here to become a subscriber!</a>
+        </footer>    
+    </div>
+</body>
+</html>

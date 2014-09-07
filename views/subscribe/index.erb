@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+	<title>Micro Blog</title>
+</head>
+<body>
+     <header class="group">
+        <h1><a href="/feed">WDI micro BLOG</a></h1>
+            <nav class="group">
+                <ul>
+                    <li><a href="/feed">Home</a></li>
+                    <li><a href="/authors">Authors</a></li>
+                    <li><a href="/subscribe">Subscribe</a></li>
+                </ul>
+            </nav>        
+    </header>
+    <div class="wrapper">
+        <div class="banner">
+            <h2>Subscribe!</h2>
+        </div>
+        <h3>Fill out the form below to get updates!</h3>
+        <form action="/subscribe/submit" method="POST">
+    	   <input type="text" name="name" placeholder="Your name">
+    	   <input type="text" name="number" placeholder="Your number">
+    	   <button>Subscribe!</button>
+        </form>
+        <footer>
+            <a href="/feed">Go back</a>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+header {
+
+}
+
+.wrapper h3 {
+	margin: 2% 0;
+	color: #E96462;
+}
+
+.banner {
+	margin: 1% 0;
+}
+
+.banner h2 {
+	font-size: 2em;
+}
+
+.submit {
+	width: 100%;
+	margin-bottom: 1%;
+	margin-top: 24px;
+}
+
+.submit #heading p {
+	display: inline;
+}
+
+.submit #heading form {
+	margin: 1% 0;
+}
+
+.submit form {
+	margin-bottom: 1%;
+}
+
+.submit #body button {
+	position: relative;
+	left: 10px;
+	bottom: 6px;
+}
+
+.timeline {
+	padding:0 3% 3% 3%;
+}
+
+.timeline form {
+	display: inline;
+}
+
+.timeline li {
+	margin-bottom: 2%;
+}
+
+.timeline a {
+	margin-right: 1%;
+}
+
+.post li {
+	padding: 0.5%;
+}
+
+.post h3 {
+	margin: 0;
+}
+
+.reblog {
+	border: 2px solid #B8A696;
+	border-radius: 10px;
+	text-align: left;
+	margin: 0 20%;
+	padding: 1%;
+}
+
+.reblog h3 {
+	margin-top: 0;
+}
+
+.reblog article p {
+	margin: 0;
+	font-size: 0.8em;
+}
+
+.detail {
+	background: #E9EAED;
+	border: 2px solid #B8A696;
+	border-radius: 10px;
+	text-align: left;
+	margin: 0 20%;
+	padding: 0 2% 2% 2%;
+}
+
+.detail p {
+	margin: 0;
+}
+
+.list {
+	padding: 5% 0 0 20%;
+	text-align: left;
+}
+
+.list li {
+	margin-bottom: 1em;
+}
+
+.list h3 {
+	display: inline;
+	margin-right: 0.5em;
+}
+
+footer {
+	margin: 2% 0 5% 0;
+}

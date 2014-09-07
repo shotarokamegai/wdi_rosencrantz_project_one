@@ -1,0 +1,22 @@
+
+############
+###Twilio###
+############
+
+require 'rubygems' # not necessary with ruby 1.9 but included for completeness 
+require 'twilio-ruby' 
+ 
+# put your own credentials here 
+account_sid = 'ACdd4bf15707f47abf0705c8118500a1a9' 
+auth_token = '29bcbf64f51836b99b54487bd1f6224c' 
+ 
+# set up a client to talk to the Twilio REST API 
+@client = Twilio::REST::Client.new account_sid, auth_token 
+ 
+@client.account.messages.create({
+	:from => '+16467624182', 
+	:to => '9173312207', 
+	:body => 'Micro Blog has been updated!',  
+})
+
+####################################
