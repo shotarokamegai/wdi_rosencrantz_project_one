@@ -1,5 +1,6 @@
 @import "reset.css";
 @import "general.css";
-@import "layout.css";
-@import "objects.css";
+/*@import "layout.css";*/
+/*@import "objects.css";*/
+@import "responsive.css";
 @import "utilities.css";

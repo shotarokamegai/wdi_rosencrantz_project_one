@@ -4,7 +4,8 @@
 <head>
 	<meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="/main.css">
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
 	<title><%= Author.where(id: post.author_id)[0]["name"]%>'s Post</title>
 </head>
 <body>
@@ -27,9 +28,10 @@
             <h2 class="title"><%= post.title %></h2>
             <p class="content"><%= post.content %></p> 
         </article>
-        <footer>
-            <a href="/feed">Go Back</a>
-        </footer>    
+        <a href="/feed">Go Back</a>
     </div>
+    <footer>
+            
+    </footer>        
 </body>
 </html>

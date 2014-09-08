@@ -1,0 +1,810 @@
+body {
+	margin: 0 auto;
+	background: #FFA46D;
+	font-family: 'Yanone Kaffeesatz', sans-serif;	/*cursor: pointer;*/
+	font-size: 1.1em;
+	line-height: 1.5;
+	text-align: center;
+}
+
+img {
+	max-width: 100%;
+}
+
+strong {
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 1.3em;
+}
+
+p {
+	margin: 1.5em 0;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #FFFF65;
+}
+
+textarea {
+	width: 90%;
+}
+
+.wrapper {
+	margin: 2% 5%;
+	/*position: relative;*/
+}
+
+@media screen and (max-width: 1024px) {
+
+/******Header******/
+
+	header {
+		background: #000000;
+		padding: 2% 5%;
+		text-align: center;
+		border-bottom: 4px solid #E9EAED;
+	}
+
+	header h1 a {
+		float: left;
+		color: #FFFF65;
+		font-size: 1.5em; 
+		line-height: 1.2;
+		font-weight: bold;
+		font-family: 'Oswald', sans-serif;
+		letter-spacing: 0em;
+	}
+
+	header h1 a:hover {
+	
+	}
+	
+	header h2 {
+		display: inline;
+		font-size: 2em;
+	}
+
+	header h3 {
+		font-size: 1.5em;
+		display: inline;
+	}
+
+	nav {
+		text-align: center;	
+		float: right;
+		margin-top: 3px;
+	}
+
+	nav ul {
+		width: 150%;
+		text-align: center;
+	}
+
+	nav ul li {
+		float: left;
+		list-style: none;
+		padding: 0;
+	}
+	
+	nav ul li a {
+		color: #FFFF65;
+		margin-left: 1em;
+	}
+
+	nav ul li a:hover {
+		color: #BABA4A;
+	}	
+
+/******submit form******/
+
+	.submit {
+		width: 100%;
+		margin-bottom: 1%;
+		margin-top: 24px;
+	}
+
+	.submit #heading p {
+		display: inline;
+	}
+
+	.submit #heading form {
+		margin: 1% 0;
+	}
+
+	.submit form {
+		margin-bottom: 1%;
+	}
+
+	.submit #body button {
+		position: relative;
+		left: 10px;
+		bottom: 6px;
+	}
+
+/******wrapper******/
+
+	.wrapper h3 {
+		margin: 2% 0;
+		color: #E96462;
+		width: 100%;
+		display: block;
+		text-align: center;
+	}
+
+	.wrapper form {
+		margin-bottom: 2%;
+	}
+
+	.detail {
+		background: #E9EAED;
+		border: 2px solid #B8A696;
+		border-radius: 10px;
+		text-align: left;
+		margin: 0 20% 5% 20%;
+		padding: 0 2% 2% 2%;
+	}
+
+	.detail p {
+		margin: 0;
+	}
+
+	.title {
+		font-size: 2em;
+	}
+
+	.date {
+		color: #B8A696;
+		font-size: 1.5em;
+		margin-top: 0;
+	}
+
+	.content::first-letter {
+		text-transform: capitalize;
+		font-size: 2.5em;
+		color: #E96462;
+	}
+
+/******timeline******/
+
+	.timeline {
+		padding:0 3% 0 3%;
+	}
+
+	.timeline form {
+		display: inline;
+	}
+
+	.timeline h4 {
+		text-align: left;
+		font-size: 0.8em;
+		margin-left: 2%;
+	}
+
+	.timeline li {
+		margin-bottom: 2%;
+	}
+
+	.timeline a {
+		margin-right: 1%;
+	}
+
+	.post {
+		background: #E9EAED;
+		border-radius: 10px;
+	}
+
+	.post a {
+		font-size: 0.8em;
+	}
+
+	.post h3 {
+		margin: 0;
+	}
+
+	.post h3 a {
+		font-size: 1em;
+	}
+
+	.post li {
+		padding: 0.5%;
+	}
+
+/******banner******/
+
+	.banner {
+		margin: 1% 0;
+	}
+
+	.banner {
+	/*background: #FFFF65;*/
+		margin: 1% 0;
+		padding: 1%;
+	}
+
+	.banner h2 {
+		font-size: 2em;
+		font-family: 'Yanone Kaffeesatz', sans-serif;
+	}
+
+	.banner h2 {
+		font-size: 2em;
+	}
+
+/******reblog******/
+
+	.reblog {
+		background: #E9EAED;
+		border: 2px solid #B8A696;
+		border-radius: 10px;
+		text-align: left;
+		margin: 0 20%;
+		padding: 1%;
+	}
+
+	.reblog h3 {
+		margin-top: 0;
+		font-size: 1.2em;
+	}
+
+	.reblog article p {
+		margin: 0;
+		font-size: 0.8em;
+	}
+
+/******list in authors page******/
+
+	.list {
+		padding: 4% 0 0 20%;
+		text-align: left;
+	}
+
+	.list li {
+		margin-bottom: 1em;
+	}
+
+	.list h3 a {
+		display: inline;
+		margin-right: 0.5em;
+		color: #E9EAED;
+	}
+
+/******footer******/
+
+	footer {
+		/*background: #000000;
+		height: 40px;
+		border-top: 4px solid #E9EAED;
+		margin: 2% 0 0 0;
+		position: absolute;
+		bottom: 0;*/
+	}
+}
+
+@media screen and (max-width: 768px) {
+/******Header******/
+
+	header {
+		background: #000000;
+		padding: 2% 5%;
+		text-align: center;
+		border-bottom: 4px solid #E9EAED;
+	}
+
+	header h1 a {
+		float: left;
+		color: #FFFF65;
+		font-size: 1.3em; 
+		line-height: 1.2;
+		font-weight: bold;
+		font-family: 'Oswald', sans-serif;
+		letter-spacing: 0em;
+	}
+
+	header h1 a:hover {
+	
+	}
+	
+	header h2 {
+		display: inline;
+		font-size: 1.8em;
+	}
+
+	header h3 {
+		font-size: 1.5em;
+		display: inline;
+	}
+
+	nav {
+		text-align: center;	
+		float: right;
+		margin-top: 3px;
+	}
+
+	nav ul {
+		width: 150%;
+		text-align: center;
+	}
+
+	nav ul li {
+		float: left;
+		list-style: none;
+		padding: 0;
+	}
+	
+	nav ul li a {
+		color: #FFFF65;
+		margin-left: 0.8em;
+	}
+
+	nav ul li a:hover {
+		color: #BABA4A;
+	}	
+
+/******submit form******/
+
+	.submit {
+		width: 100%;
+		margin-bottom: 1%;
+		margin-top: 24px;
+	}
+
+	.submit #heading p {
+		display: inline;
+	}
+
+	.submit #heading form {
+		margin: 1% 0;
+	}
+
+	.submit form {
+		margin-bottom: 1%;
+	}
+
+	.submit #body button {
+		position: relative;
+		left: 10px;
+		bottom: 6px;
+	}
+
+/******wrapper******/
+
+	.wrapper h3 {
+		margin: 2% 0;
+		color: #E96462;
+	}
+
+	.wrapper form {
+		margin-bottom: 2%;
+	}
+
+	.detail {
+		background: #E9EAED;
+		border: 2px solid #B8A696;
+		border-radius: 10px;
+		text-align: left;
+		margin: 0 20% 5% 20%;
+		padding: 0 2% 2% 2%;
+	}
+
+	.detail p {
+		margin: 0;
+	}
+
+	.title {
+		font-size: 2em;
+	}
+
+	.date {
+		color: #B8A696;
+		font-size: 1.5em;
+		margin-top: 0;
+	}
+
+	.content::first-letter {
+		text-transform: capitalize;
+		font-size: 2.5em;
+		color: #E96462;
+	}
+
+/******timeline******/
+
+	.timeline {
+		padding:0 3% 0 3%;
+	}
+
+	.timeline form {
+		display: inline;
+	}
+
+	.timeline h4 {
+		text-align: left;
+		font-size: 0.8em;
+		margin-left: 2%;
+	}
+
+	.timeline li {
+		margin-bottom: 2%;
+	}
+
+	.timeline a {
+		margin-right: 1%;
+	}
+
+	.post {
+		background: #E9EAED;
+		border-radius: 10px;
+	}
+
+	.post a {
+		font-size: 0.8em;
+	}
+
+	.post h3 {
+		margin: 0;
+	}
+
+	.post h3 a {
+		font-size: 1em;
+	}
+
+	.post li {
+		padding: 0.5%;
+	}
+
+/******banner******/
+
+	.banner {
+		margin: 1% 0;
+	}
+
+	.banner {
+	/*background: #FFFF65;*/
+		margin: 1% 0;
+		padding: 1%;
+	}
+
+	.banner h2 {
+		font-size: 2em;
+		font-family: 'Yanone Kaffeesatz', sans-serif;
+	}
+
+	.banner h2 {
+		font-size: 2em;
+	}
+
+/******reblog******/
+
+	.reblog {
+		background: #E9EAED;
+		border: 2px solid #B8A696;
+		border-radius: 10px;
+		text-align: left;
+		margin: 0 20%;
+		padding: 1%;
+	}
+
+	.reblog h3 {
+		margin-top: 0;
+		font-size: 1.2em;
+	}
+
+	.reblog article p {
+		margin: 0;
+		font-size: 0.8em;
+	}
+
+/******list in authors page******/
+
+	.list {
+		padding: 4% 0 0 20%;
+		text-align: left;
+	}
+
+	.list li {
+		margin-bottom: 1em;
+	}
+
+	.list h3 a {
+		display: inline;
+		margin-right: 0.5em;
+		color: #E9EAED;
+	}
+
+/******footer******/
+
+	footer {
+		/*background: #000000;
+		height: 40px;
+		border-top: 4px solid #E9EAED;
+		margin: 2% 0 0 0;
+		position: absolute;
+		bottom: 0;*/
+	}
+}
+
+@media screen and (max-width: 401px) {
+
+/******Header******/
+
+	header {
+		background: #000000;
+		padding: 2% 0 0 0;
+		text-align: center;
+		border-bottom: none;
+	}
+
+	header h1 a {
+		color: #FFFF65;
+		font-size: 1.3em; 
+		line-height: 1.2;
+		font-weight: bold;
+		font-family: 'Oswald', sans-serif;
+		letter-spacing: 0em;
+		float: none;
+	}
+
+	header h1 a:hover {
+
+	}
+	
+	header h2 {
+		display: inline;
+		font-size: 1.8em;
+	}
+
+	header h3 {
+		font-size: 1.5em;
+		display: inline;
+	}
+
+	nav {
+		float: none;
+		margin-top: 3px;
+		text-align: center;
+	}
+
+	nav ul {
+		width: 100%;
+	}
+
+	nav ul li {
+		float: none;
+		background: #E9EAED;
+		border-bottom: 1px solid #000000;
+		list-style: none;
+		text-align: center;
+		padding: 2%;
+	}
+	
+	nav ul li a {
+		color: #000000;
+		text-align: center;
+		margin: 0;
+	}
+
+	nav ul li:hover {
+		background: #B5B5B8;
+	}
+
+	nav ul li a:hover {
+		color: #FFFF65;
+	}
+
+/******submit form******/
+
+	.submit {
+		width: 100%;
+		margin-bottom: 1%;
+		margin-top: 24px;
+	}
+
+	.submit #heading p {
+		display: inline;
+	}
+
+	.submit #heading form {
+		margin: 1% 0;
+	}
+
+	.submit form {
+		margin-bottom: 1%;
+	}
+
+	.submit #body button {
+		position: relative;
+		left: 10px;
+		bottom: 6px;
+	}
+
+	.submit #add {
+		display: block;
+	}
+
+	.submit #drobox {
+		display: block;
+	}
+
+	.submit #author {
+		display: block;
+	}
+
+	.submit #title {
+		display: block;
+	}
+
+	.submit #hashtag {
+		display: block;
+	}
+
+/******wrapper******/
+
+	.wrapper {
+		margin: 0;
+	}
+
+	.wrapper h2 {
+		margin: 5% 0;
+	}
+	
+	.wrapper h3 {
+		color: #E96462;
+	}
+
+	.wrapper form {
+		margin-bottom: 2%;
+	}
+
+	button#subscribe {
+		margin: 10% 0 7% 0;
+	}
+
+	.detail {
+		background: #E9EAED;
+		border: 2px solid #B8A696;
+		border-radius: 10px;
+		text-align: left;
+		margin: 0 20% 5% 20%;
+		padding: 0 2% 2% 2%;
+	}
+
+	.detail p {
+		margin: 0;
+	}
+
+	.title {
+		font-size: 2em;
+	}
+
+	.date {
+		color: #B8A696;
+		font-size: 1.5em;
+		margin-top: 0;
+	}
+
+	.content::first-letter {
+		text-transform: capitalize;
+		font-size: 2.5em;
+		color: #E96462;
+	}
+
+/******timeline******/
+
+	.timeline {
+		padding:0 3% 0 3%;
+	}
+
+	.timeline form {
+		display: inline;
+	}
+
+	.timeline h4 {
+		text-align: left;
+		font-size: 0.8em;
+		margin-left: 2%;
+	}
+
+	.timeline li {
+		margin-bottom: 2%;
+	}
+
+	.timeline a {
+		margin-right: 1%;
+	}
+
+	.post {
+		background: #E9EAED;
+		border-radius: 10px;
+	}
+
+	.post a {
+		font-size: 0.8em;
+	}
+
+	.post h3 {
+		margin: 0;
+	}
+
+	.post h3 a {
+		font-size: 1em;
+	}
+
+	.post li {
+		padding: 0.5%;
+	}
+
+/******banner******/
+
+	.banner {
+		margin: 1% 0;
+	}
+
+	.banner {
+	/*background: #FFFF65;*/
+		margin: 1% 0;
+		padding: 1%;
+	}
+
+	.banner h2 {
+		font-size: 1.5em;
+		font-family: 'Yanone Kaffeesatz', sans-serif;
+	}
+
+/******reblog******/
+
+	.reblog {
+		background: #E9EAED;
+		border: 2px solid #B8A696;
+		border-radius: 10px;
+		text-align: left;
+		margin: 0 20%;
+		padding: 1%;
+	}
+
+	.reblog h3 {
+		margin-top: 0;
+		font-size: 1.2em;
+	}
+
+	.reblog article p {
+		margin: 0;
+		font-size: 0.8em;
+	}
+
+/******list in authors page******/
+
+	.list {
+		padding: 0;
+		text-align: center;
+	}
+
+	.list li {
+		margin-bottom: 1em;
+	}
+
+	.list h3 a {
+		display: inline;
+		color: #E9EAED;
+	}
+
+	.list h3 a:hover {
+		color: #FFFF65
+	}
+
+/******footer******/
+
+	footer {
+		/*background: #000000;
+		height: 40px;
+		border-top: 4px solid #E9EAED;
+		margin: 2% 0 0 0;
+		position: absolute;
+		bottom: 0;*/
+	}
+}

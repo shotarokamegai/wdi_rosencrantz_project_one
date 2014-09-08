@@ -4,7 +4,8 @@
 <head>
 	<meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="/main.css">
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
 	<title>Micro Blog</title>
 </head>
 <body>
@@ -18,31 +19,31 @@
                 </ul>
             </nav>        
     </header>
-    <div class="wrapper">
-        <div class="banner">
+    <div class="banner">
             <h2>Submit your post about WDI experience!</h2>
-        </div>
+    </div>
+    <div class="wrapper">
         <div class="submit group">
             <div class="group" id="heading">
-                <p>Add an author here: 
+                <p><span style="add">Add an author here: 
                     <form action="/feed/:add_author/add_author" method="POST" id="add_author">
                         <input type="text" name="add_author" placeholder="Add new author">
                         <button>Add</button>
-                    </form>
+                    </form></span>
                 </p> 
-                Or select an author from a dropbox:
-	            <form action="/feed" method="POST">
-		        Author: 
+                <span id="dropbox">Select an author from a dropbox:
+	            <form action="/feed" method="POST"></span>
+		        <span style="author">Author: 
                     <select name="author">
                         <option></option>    
                             <% authors.each do |author|%>
                                 <option value="<%= author.name %>"><%= author.name%></option>
                             <% end %> 
-                    </select>
-    	        <p>Title:
-    		        <input type="text" name="title" placeholder="Title"></p>
-    	        <p>Hashtag:    
-                    <input type="text" name="tag" placeholder="Hashtag">
+                    </select></span>
+    	        <p><span id="title">Title:
+    		        <input type="text" name="title" placeholder="Title"><s/span></p>
+    	        <p><span id="hashtag">Hashtag:    
+                    <input type="text" name="tag" placeholder="Hashtag"></span>
     	        </p>   
             </div>
             <div class="group "id="body">
@@ -57,6 +58,7 @@
             <ul>
                 <% posts.each do |post| %>
                     <div class="post">
+                        <h4>Created at: <%= post.created_at %></h4>
                         <li><h3><a href="/posts/<%= post.id %>"><%= post.title %></a></h3> <a href="/tag/<%= post.tag_name %>/posts"><span style="color: #E96462">#<%= post.tag_name %></span></a><br />
                          By: <a href="/authors/<%= post.author_id %>/posts"><%= Author.find_by(id: post.author_id).name %></a>
                         <form action="/reblog/<%= post.id %>" method="GET">
@@ -72,9 +74,10 @@
                 <% end %>
             </ul>
         </div>
-        <footer>
-            <a href="/subscribe">Click here to become a subscriber!</a>
-        </footer>    
-    </div>
+        <a href="/subscribe">Click here to become a subscriber!</a>
+        </div>
+    <footer>
+            
+    </footer>    
 </body>
 </html>
