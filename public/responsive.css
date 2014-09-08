@@ -33,7 +33,7 @@ a:hover {
 }
 
 textarea {
-	width: 90%;
+	width: 100%;
 }
 
 .wrapper {
@@ -261,7 +261,6 @@ textarea {
 /******list in authors page******/
 
 	.list {
-		padding: 4% 0 0 20%;
 		text-align: left;
 	}
 
@@ -371,6 +370,35 @@ textarea {
 		position: relative;
 		left: 10px;
 		bottom: 6px;
+	}
+
+	.submit form#add_author {
+		margin-bottom: 3%;
+	}
+
+	.submit #add {
+		display: block;
+		margin-bottom: 3%;
+	}
+
+	.submit #dropbox {
+		display: block;
+		margin-bottom: 10%;
+	}
+
+	.submit #author {
+		display: block;
+		padding: 3% 0;
+	}
+
+	.submit #title {
+		display: block;
+		margin-bottom: 3%;
+	}
+
+	.submit #hashtag {
+		display: block;
+		margin-bottom: 3%;
 	}
 
 /******wrapper******/
@@ -531,7 +559,13 @@ textarea {
 
 @media screen and (max-width: 401px) {
 
-/******Header******/
+/******body******/
+
+	body {
+		padding-bottom: 5%;
+	}
+
+/******header******/
 
 	header {
 		background: #000000;
@@ -661,6 +695,10 @@ textarea {
 		margin-bottom: 2%;
 	}
 
+	textarea {
+	width: 90%;
+	}	
+
 	button#subscribe {
 		margin: 10% 0 7% 0;
 	}
@@ -698,6 +736,7 @@ textarea {
 
 	.timeline {
 		padding:0 3% 0 3%;
+		margin-bottom: 2%;
 	}
 
 	.timeline form {

@@ -25,7 +25,7 @@
     <div class="wrapper">
         <div class="submit group">
             <div class="group" id="heading">
-                <p><span style="add">Add an author here: 
+                <p><span id="add">Add an author here: 
                     <form action="/feed/:add_author/add_author" method="POST" id="add_author">
                         <input type="text" name="add_author" placeholder="Add new author">
                         <button>Add</button>
@@ -33,7 +33,7 @@
                 </p> 
                 <span id="dropbox">Select an author from a dropbox:
 	            <form action="/feed" method="POST"></span>
-		        <span style="author">Author: 
+		        <span id="author">Author: 
                     <select name="author">
                         <option></option>    
                             <% authors.each do |author|%>
@@ -48,7 +48,7 @@
             </div>
             <div class="group "id="body">
     	       <p>
-    	           <textarea name="content" rows="5" cols="70">Write something here</textarea><button>Post</button>
+    	           <textarea name="content" rows="5" cols="70%">Write something here</textarea><button>Post</button>
     	       </p>
 	           </form>
             </div>
