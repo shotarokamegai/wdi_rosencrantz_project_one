@@ -26,20 +26,22 @@ end
 post('/feed') do
 	author = Author.find_by({name: params["author"]})
 	post = {"author_id" => author.id, "title" => params["title"], "content" => params["content"], "tag_name" => params["tag"], "created_at" => Time.new}
+	tag = {"name" => params["tag"]}
 	Micro_post.create(post)
+	Tag.create(tag)
 
-	# account_sid = 'ACdd4bf15707f47abf0705c8118500a1a9' 
-	# auth_token = '29bcbf64f51836b99b54487bd1f6224c'
-	# @client = Twilio::REST::Client.new account_sid, auth_token
+# 	account_sid = 'ACdd4bf15707f47abf0705c8118500a1a9' 
+# 	auth_token = '29bcbf64f51836b99b54487bd1f6224c'
+# 	@client = Twilio::REST::Client.new account_sid, auth_token
 
-# Twilio only works to my number since it is required to resister.
-	# Subscriber.all().each do |subscriber|
-	# 	@client.account.messages.create({
-	# 	:from => '+16467624182', 
-	# 	:to => subscriber.phone_number, 
-	# 	:body => "#{post["title"]} has been posted by #{Author.find_by({id: post["author_id"]})["name"]}",  
-	# 	})
-	# end
+# # Twilio only works to my number since it is required to resister.
+# 	Subscriber.all().each do |subscriber|
+# 		@client.account.messages.create({
+# 		:from => '+16467624182', 
+# 		:to => subscriber.phone_number, 
+# 		:body => "#{post["title"]} has been posted by #{Author.find_by({id: post["author_id"]})["name"]}",  
+# 		})
+# 	end
 
 	redirect "/feed"
 end
@@ -73,9 +75,14 @@ get('/authors/:id/posts') do
 	erb(:"author/index", { locals: { posts: posts }})
 end
 
+get('/tag/posts') do
+	tag = params["name"].delete('#')
+	posts = Micro_post.where(tag_name: tag)
+	erb(:"tag/tags", { locals: { posts: posts, tag: tag }})
+end
+
 get('/tag/:name/posts') do
 	posts = Micro_post.where(tag_name: params[:name])
-
 	erb(:"tag/index", { locals: { posts: posts }})
 end
 

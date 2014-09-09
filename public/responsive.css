@@ -7,6 +7,14 @@ body {
 	text-align: center;
 }
 
+nav {
+	color: #FFFF65;
+}
+
+nav form {
+	display: inline;
+}
+
 img {
 	max-width: 100%;
 }
@@ -92,6 +100,10 @@ textarea {
 		list-style: none;
 		padding: 0;
 	}
+
+	nav ul li #third {
+		margin-right: 1em;
+	}
 	
 	nav ul li a {
 		color: #FFFF65;
@@ -110,16 +122,34 @@ textarea {
 		margin-top: 24px;
 	}
 
+	.submit #heading {
+		margin: -1% 0 -2% 0;
+	}
+
 	.submit #heading p {
 		display: inline;
+		margin-top: -2%;
 	}
 
 	.submit #heading form {
 		margin: 1% 0;
 	}
 
+	.submit #add {
+		
+	}
+
+	.submit #dropbox {
+		margin-top: 1%;
+		display: block;
+	}
+
 	.submit form {
 		margin-bottom: 1%;
+	}
+
+	.submit #body {
+		margin-bottom: -2%;
 	}
 
 	.submit #body button {
@@ -132,14 +162,18 @@ textarea {
 
 	.wrapper h3 {
 		margin: 2% 0;
-		color: #E96462;
+		/*color: #E9EAED;*/
 		width: 100%;
 		display: block;
-		text-align: center;
+		/*text-align: center;*/
 	}
 
 	.wrapper form {
 		margin-bottom: 2%;
+	}
+
+	.wrapper #edit_form {
+		margin-top: -5%;
 	}
 
 	.detail {
@@ -163,6 +197,7 @@ textarea {
 		color: #B8A696;
 		font-size: 1.5em;
 		margin-top: 0;
+		text-align: left;
 	}
 
 	.content::first-letter {
@@ -185,10 +220,11 @@ textarea {
 		text-align: left;
 		font-size: 0.8em;
 		margin-left: 2%;
+		margin-top: 1%;
 	}
 
 	.timeline li {
-		margin-bottom: 2%;
+		margin-bottom: 1%;
 	}
 
 	.timeline a {
@@ -196,8 +232,10 @@ textarea {
 	}
 
 	.post {
-		background: #E9EAED;
+		background-color: rgba(233, 234, 237, 0.7);
+		border: 2px solid #B8A696;
 		border-radius: 10px;
+		margin-bottom: 1%;
 	}
 
 	.post a {
@@ -233,14 +271,14 @@ textarea {
 		font-family: 'Yanone Kaffeesatz', sans-serif;
 	}
 
-	.banner h2 {
-		font-size: 2em;
+	.banner h3 {
+		color: #E9EAED;
 	}
 
 /******reblog******/
 
 	.reblog {
-		background: #E9EAED;
+		background-color: rgba(233, 234, 237, 0.9);
 		border: 2px solid #B8A696;
 		border-radius: 10px;
 		text-align: left;
@@ -268,10 +306,22 @@ textarea {
 		margin-bottom: 1em;
 	}
 
-	.list h3 a {
+	.list h3 {
 		display: inline;
+	}
+
+	.list h3 a {
 		margin-right: 0.5em;
 		color: #E9EAED;
+	}
+
+	.list h3 a:hover {
+		color: #FFFF65;
+	}
+
+	.list h4 {
+		 display: inline;
+		 margin-left: 1%;
 	}
 
 /******footer******/
@@ -296,14 +346,22 @@ textarea {
 		border-bottom: 4px solid #E9EAED;
 	}
 
+	header h1 {
+		display: block;
+		float: none;
+	}
+
 	header h1 a {
-		float: left;
 		color: #FFFF65;
-		font-size: 1.3em; 
+		font-size: 1.8em; 
 		line-height: 1.2;
 		font-weight: bold;
 		font-family: 'Oswald', sans-serif;
 		letter-spacing: 0em;
+		display: block;
+		text-align: center;
+		width: 100%;
+		margin-bottom: 2%;
 	}
 
 	header h1 a:hover {
@@ -322,13 +380,14 @@ textarea {
 
 	nav {
 		text-align: center;	
-		float: right;
 		margin-top: 3px;
+		width: 100%;
+		float: none;
 	}
 
 	nav ul {
-		width: 150%;
-		text-align: center;
+		width: 80%;
+		float: right;
 	}
 
 	nav ul li {
@@ -336,6 +395,11 @@ textarea {
 		list-style: none;
 		padding: 0;
 	}
+
+	nav ul li #third {
+		margin-right: 0.8em;
+	}
+	
 	
 	nav ul li a {
 		color: #FFFF65;
@@ -352,6 +416,10 @@ textarea {
 		width: 100%;
 		margin-bottom: 1%;
 		margin-top: 24px;
+	}
+
+	.submit #heading {
+		margin: -2% 0 -6% 0;
 	}
 
 	.submit #heading p {
@@ -405,7 +473,7 @@ textarea {
 
 	.wrapper h3 {
 		margin: 2% 0;
-		color: #E96462;
+		/*color: #E96462;*/
 	}
 
 	.wrapper form {
@@ -433,6 +501,8 @@ textarea {
 		color: #B8A696;
 		font-size: 1.5em;
 		margin-top: 0;
+		margin-top: 0;
+		text-align: left;
 	}
 
 	.content::first-letter {
@@ -455,6 +525,7 @@ textarea {
 		text-align: left;
 		font-size: 0.8em;
 		margin-left: 2%;
+		margin-top: 1%;
 	}
 
 	.timeline li {
@@ -466,8 +537,10 @@ textarea {
 	}
 
 	.post {
-		background: #E9EAED;
+		background-color: rgba(233, 234, 237, 0.7);
+		border: 2px solid #B8A696;
 		border-radius: 10px;
+		margin-bottom: 1%;
 	}
 
 	.post a {
@@ -499,12 +572,12 @@ textarea {
 	}
 
 	.banner h2 {
-		font-size: 2em;
+		font-size: 1.5em;
 		font-family: 'Yanone Kaffeesatz', sans-serif;
 	}
 
-	.banner h2 {
-		font-size: 2em;
+	.banner h3 {
+		color: #E9EAED;
 	}
 
 /******reblog******/
@@ -539,10 +612,634 @@ textarea {
 		margin-bottom: 1em;
 	}
 
-	.list h3 a {
+	.list h3 {
 		display: inline;
+	}
+
+	.list h3 a {
 		margin-right: 0.5em;
 		color: #E9EAED;
+	}
+
+	.list h3 a:hover {
+		color: #FFFF65;
+	}
+
+	.list h4 {
+		 display: inline;
+		 margin-left: 1%;
+	}
+
+/******footer******/
+
+	footer {
+		/*background: #000000;
+		height: 40px;
+		border-top: 4px solid #E9EAED;
+		margin: 2% 0 0 0;
+		position: absolute;
+		bottom: 0;*/
+	}
+}
+
+@media screen and (max-width: 657px) {
+/******Header******/
+
+	header {
+		background: #000000;
+		padding: 2% 5%;
+		text-align: center;
+		border-bottom: 4px solid #E9EAED;
+	}
+
+	header h1 {
+		display: block;
+		float: none;
+	}
+
+	header h1 a {
+		color: #FFFF65;
+		font-size: 1.8em; 
+		line-height: 1.2;
+		font-weight: bold;
+		font-family: 'Oswald', sans-serif;
+		letter-spacing: 0em;
+		display: block;
+		text-align: center;
+		width: 100%;
+		margin-bottom: 2%;
+	}
+
+	header h1 a:hover {
+	
+	}
+	
+	header h2 {
+		display: inline;
+		font-size: 1.8em;
+	}
+
+	header h3 {
+		font-size: 1.5em;
+		display: inline;
+	}
+
+	nav {
+		text-align: center;	
+		margin-top: 3px;
+		width: 100%;
+		float: none;
+	}
+
+	nav ul {
+		width: 90%;
+		float: right;
+	}
+
+	nav ul li {
+		float: left;
+		list-style: none;
+		padding: 0;
+	}
+
+	nav ul li #third {
+		margin-right: 0.8em;
+	}
+	
+	
+	nav ul li a {
+		color: #FFFF65;
+		margin-left: 0.8em;
+	}
+
+	nav ul li a:hover {
+		color: #BABA4A;
+	}	
+
+/******submit form******/
+
+	.submit {
+		width: 100%;
+		margin-bottom: 1%;
+		margin-top: 24px;
+	}
+
+	.submit #heading {
+		margin: -2% 0 -6% 0;
+	}
+
+	.submit #heading p {
+		display: inline;
+	}
+
+	.submit #heading form {
+		margin: 1% 0;
+	}
+
+	.submit form {
+		margin-bottom: 1%;
+	}
+
+	.submit #body button {
+		position: relative;
+		left: 10px;
+		bottom: 6px;
+	}
+
+	.submit form#add_author {
+		margin-bottom: 3%;
+	}
+
+	.submit #add {
+		display: block;
+		margin-bottom: 3%;
+	}
+
+	.submit #dropbox {
+		display: block;
+		margin-bottom: 10%;
+	}
+
+	.submit #author {
+		display: block;
+		padding: 3% 0;
+	}
+
+	.submit #title {
+		display: block;
+		margin-bottom: 3%;
+	}
+
+	.submit #hashtag {
+		display: block;
+		margin-bottom: 3%;
+	}
+
+/******wrapper******/
+
+	.wrapper h3 {
+		margin: 2% 0;
+		/*color: #E96462;*/
+	}
+
+	.wrapper form {
+		margin-bottom: 2%;
+	}
+
+	.detail {
+		background: #E9EAED;
+		border: 2px solid #B8A696;
+		border-radius: 10px;
+		text-align: left;
+		margin: 0 20% 5% 20%;
+		padding: 0 2% 2% 2%;
+	}
+
+	.detail p {
+		margin: 0;
+	}
+
+	.title {
+		font-size: 2em;
+	}
+
+	.date {
+		color: #B8A696;
+		font-size: 1.5em;
+		margin-top: 0;
+		margin-top: 0;
+		text-align: left;
+	}
+
+	.content::first-letter {
+		text-transform: capitalize;
+		font-size: 2.5em;
+		color: #E96462;
+	}
+
+/******timeline******/
+
+	.timeline {
+		padding:0 3% 0 3%;
+	}
+
+	.timeline form {
+		display: inline;
+	}
+
+	.timeline h4 {
+		text-align: left;
+		font-size: 0.8em;
+		margin-left: 2%;
+		margin-top: 1%;
+	}
+
+	.timeline li {
+		margin-bottom: 2%;
+	}
+
+	.timeline a {
+		margin-right: 1%;
+	}
+
+	.post {
+		background-color: rgba(233, 234, 237, 0.7);
+		border: 2px solid #B8A696;
+		border-radius: 10px;
+		margin-bottom: 1%;
+	}
+
+	.post a {
+		font-size: 0.8em;
+	}
+
+	.post h3 {
+		margin: 0;
+	}
+
+	.post h3 a {
+		font-size: 1em;
+	}
+
+	.post li {
+		padding: 0.5%;
+	}
+
+/******banner******/
+
+	.banner {
+		margin: 1% 0;
+	}
+
+	.banner {
+	/*background: #FFFF65;*/
+		margin: 1% 0;
+		padding: 1%;
+	}
+
+	.banner h2 {
+		font-size: 1.5em;
+		font-family: 'Yanone Kaffeesatz', sans-serif;
+	}
+
+	.banner h3 {
+		color: #E9EAED;
+	}
+
+/******reblog******/
+
+	.reblog {
+		background: #E9EAED;
+		border: 2px solid #B8A696;
+		border-radius: 10px;
+		text-align: left;
+		margin: 0 20%;
+		padding: 1%;
+	}
+
+	.reblog h3 {
+		margin-top: 0;
+		font-size: 1.2em;
+	}
+
+	.reblog article p {
+		margin: 0;
+		font-size: 0.8em;
+	}
+
+/******list in authors page******/
+
+	.list {
+		padding: 4% 0 0 20%;
+		text-align: left;
+	}
+
+	.list li {
+		margin-bottom: 1em;
+	}
+
+	.list h3 {
+		display: inline;
+	}
+
+	.list h3 a {
+		margin-right: 0.5em;
+		color: #E9EAED;
+	}
+
+	.list h3 a:hover {
+		color: #FFFF65;
+	}
+
+	.list h4 {
+		 display: inline;
+		 margin-left: 1%;
+	}
+
+/******footer******/
+
+	footer {
+		/*background: #000000;
+		height: 40px;
+		border-top: 4px solid #E9EAED;
+		margin: 2% 0 0 0;
+		position: absolute;
+		bottom: 0;*/
+	}
+}
+
+@media screen and (max-width: 583px) {
+/******Header******/
+
+	header {
+		background: #000000;
+		padding: 2% 5%;
+		text-align: center;
+		border-bottom: 4px solid #E9EAED;
+	}
+
+	header h1 {
+		display: block;
+		float: none;
+	}
+
+	header h1 a {
+		color: #FFFF65;
+		font-size: 1.8em; 
+		line-height: 1.2;
+		font-weight: bold;
+		font-family: 'Oswald', sans-serif;
+		letter-spacing: 0em;
+		display: block;
+		text-align: center;
+		width: 100%;
+		margin-bottom: 2%;
+	}
+
+	header h1 a:hover {
+	
+	}
+	
+	header h2 {
+		display: inline;
+		font-size: 1.8em;
+	}
+
+	header h3 {
+		font-size: 1.5em;
+		display: inline;
+	}
+
+	nav {
+		text-align: center;	
+		margin-top: 3px;
+		width: 100%;
+		float: none;
+	}
+
+	nav ul {
+		width: 70%;
+		float: right;
+	}
+
+	nav ul li {
+		float: left;
+		list-style: none;
+		padding: 0;
+	}
+
+	nav ul li #third {
+		margin-right: 0.8em;
+	}
+	
+	
+	nav ul li a {
+		color: #FFFF65;
+		margin-left: 0.8em;
+	}
+
+	nav ul li a:hover {
+		color: #BABA4A;
+	}	
+
+/******submit form******/
+
+	.submit {
+		width: 100%;
+		margin-bottom: 1%;
+		margin-top: 24px;
+	}
+
+	.submit #heading {
+		margin: -2% 0 -6% 0;
+	}
+
+	.submit #heading p {
+		display: inline;
+	}
+
+	.submit #heading form {
+		margin: 1% 0;
+	}
+
+	.submit form {
+		margin-bottom: 1%;
+	}
+
+	.submit #body button {
+		position: relative;
+		left: 10px;
+		bottom: 6px;
+	}
+
+	.submit form#add_author {
+		margin-bottom: 3%;
+	}
+
+	.submit #add {
+		display: block;
+		margin-bottom: 3%;
+	}
+
+	.submit #dropbox {
+		display: block;
+		margin-bottom: 10%;
+	}
+
+	.submit #author {
+		display: block;
+		padding: 3% 0;
+	}
+
+	.submit #title {
+		display: block;
+		margin-bottom: 3%;
+	}
+
+	.submit #hashtag {
+		display: block;
+		margin-bottom: 3%;
+	}
+
+/******wrapper******/
+
+	.wrapper h3 {
+		margin: 2% 0;
+		/*color: #E96462;*/
+	}
+
+	.wrapper form {
+		margin-bottom: 2%;
+	}
+
+	.detail {
+		background: #E9EAED;
+		border: 2px solid #B8A696;
+		border-radius: 10px;
+		text-align: left;
+		margin: 0 20% 5% 20%;
+		padding: 0 2% 2% 2%;
+	}
+
+	.detail p {
+		margin: 0;
+	}
+
+	.title {
+		font-size: 2em;
+	}
+
+	.date {
+		color: #B8A696;
+		font-size: 1.5em;
+		margin-top: 0;
+		margin-top: 0;
+		text-align: left;
+	}
+
+	.content::first-letter {
+		text-transform: capitalize;
+		font-size: 2.5em;
+		color: #E96462;
+	}
+
+/******timeline******/
+
+	.timeline {
+		padding:0 3% 0 3%;
+	}
+
+	.timeline form {
+		display: inline;
+	}
+
+	.timeline h4 {
+		text-align: left;
+		font-size: 0.8em;
+		margin-left: 2%;
+		margin-top: 1%;
+	}
+
+	.timeline li {
+		margin-bottom: 2%;
+	}
+
+	.timeline a {
+		margin-right: 1%;
+	}
+
+	.post {
+		background-color: rgba(233, 234, 237, 0.7);
+		border: 2px solid #B8A696;
+		border-radius: 10px;
+		margin-bottom: 1%;
+	}
+
+	.post a {
+		font-size: 0.8em;
+	}
+
+	.post h3 {
+		margin: 0;
+	}
+
+	.post h3 a {
+		font-size: 1em;
+	}
+
+	.post li {
+		padding: 0.5%;
+	}
+
+/******banner******/
+
+	.banner {
+		margin: 1% 0;
+	}
+
+	.banner {
+	/*background: #FFFF65;*/
+		margin: 1% 0;
+		padding: 1%;
+	}
+
+	.banner h2 {
+		font-size: 1.5em;
+		font-family: 'Yanone Kaffeesatz', sans-serif;
+	}
+
+	.banner h3 {
+		color: #E9EAED;
+	}
+
+/******reblog******/
+
+	.reblog {
+		background: #E9EAED;
+		border: 2px solid #B8A696;
+		border-radius: 10px;
+		text-align: left;
+		margin: 0 20%;
+		padding: 1%;
+	}
+
+	.reblog h3 {
+		margin-top: 0;
+		font-size: 1.2em;
+	}
+
+	.reblog article p {
+		margin: 0;
+		font-size: 0.8em;
+	}
+
+/******list in authors page******/
+
+	.list {
+		padding: 4% 0 0 20%;
+		text-align: left;
+	}
+
+	.list li {
+		margin-bottom: 1em;
+	}
+
+	.list h3 {
+		display: inline;
+	}
+
+	.list h3 a {
+		margin-right: 0.5em;
+		color: #E9EAED;
+	}
+
+	.list h3 a:hover {
+		color: #FFFF65;
+	}
+
+	.list h4 {
+		 display: inline;
+		 margin-left: 1%;
 	}
 
 /******footer******/
@@ -616,12 +1313,21 @@ textarea {
 		text-align: center;
 		padding: 2%;
 	}
+
+	nav ul li#search_tag {
+		display: none;
+	}
 	
 	nav ul li a {
 		color: #000000;
 		text-align: center;
 		margin: 0;
 	}
+
+	nav ul li a#third {
+		margin-right: 0;
+	}
+
 
 	nav ul li:hover {
 		background: #B5B5B8;
@@ -688,7 +1394,7 @@ textarea {
 	}
 	
 	.wrapper h3 {
-		color: #E96462;
+		/*color: #E96462;*/
 	}
 
 	.wrapper form {
@@ -696,7 +1402,7 @@ textarea {
 	}
 
 	textarea {
-	width: 90%;
+		width: 90%;
 	}	
 
 	button#subscribe {
@@ -724,6 +1430,8 @@ textarea {
 		color: #B8A696;
 		font-size: 1.5em;
 		margin-top: 0;
+		margin-top: 0;
+		text-align: left;
 	}
 
 	.content::first-letter {
@@ -747,6 +1455,7 @@ textarea {
 		text-align: left;
 		font-size: 0.8em;
 		margin-left: 2%;
+		margin-top: 1%;
 	}
 
 	.timeline li {
@@ -758,8 +1467,10 @@ textarea {
 	}
 
 	.post {
-		background: #E9EAED;
+		background-color: rgba(233, 234, 237, 0.7);
+		border: 2px solid #B8A696;
 		border-radius: 10px;
+		margin-bottom: 1%;
 	}
 
 	.post a {
@@ -793,6 +1504,10 @@ textarea {
 	.banner h2 {
 		font-size: 1.5em;
 		font-family: 'Yanone Kaffeesatz', sans-serif;
+	}
+
+	.banner h3 {
+		color: #E9EAED;
 	}
 
 /******reblog******/
@@ -834,6 +1549,11 @@ textarea {
 
 	.list h3 a:hover {
 		color: #FFFF65
+	}
+
+	.list h4 {
+		 display: inline;
+		 margin-left: 1%;
 	}
 
 /******footer******/

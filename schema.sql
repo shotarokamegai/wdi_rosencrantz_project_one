@@ -14,13 +14,6 @@ CREATE TABLE authors (
 	micro_post_id integer
 );
 
-CREATE TABLE snippets (
-	id serial primary key,
-	name varchar(50),
-	url varchar(100),
-	micro_post_id integer
-);
-
 CREATE TABLE subscribers (
 	id serial primary key,
 	name varchar(50),

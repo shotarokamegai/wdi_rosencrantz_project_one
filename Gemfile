@@ -1,4 +1,8 @@
 # A sample Gemfile
 source "https://rubygems.org"
 
-# gem "rails"
+gem "sinatra"
+gem 'activerecord'
+gem 'twilio-ruby' 
+gem 'httparty'
+gem 'pry'

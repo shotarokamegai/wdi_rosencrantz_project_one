@@ -3,13 +3,13 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="/main.css">
+    <link rel="stylesheet" type="text/css" href="/main.css">
     <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
 	<title>Micro Blog</title>
 </head>
 <body>
-     <header class="group">
+    <header class="group">
         <h1><a href="/feed">WDI micro BLOG</a></h1>
             <nav class="group">
                 <ul>
@@ -27,14 +27,15 @@
     </header>
     <div class="wrapper">
         <div class="banner">
-            <h2>Subscribe!</h2>
+            <h2>Searched by #<%= tag %></h2>
         </div>
-        <h3>Fill out the form below to get updates!</h3>
-        <form action="/subscribe/submit" method="POST">
-    	   <input type="text" name="name" placeholder="Your name">
-    	   <input type="text" name="number" placeholder="Your number">
-    	   <button id="subscribe">Subscribe</button>
-        </form>
+        <div class="list">
+            <ul>
+                <% posts.each do |post| %>
+                        <li><h3><a href="/posts/<%= post.id %>"><%= post.title %></a></h3> by <a href="/tag/<%= post.tag_name %>/posts"><%= Author.find_by(id: post.author_id).name %></a></li>
+                <% end %>
+            </ul>    
+        </div>
         <a href="/feed">Go back</a>
     </div>
     <footer>

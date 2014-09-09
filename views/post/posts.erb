@@ -10,12 +10,18 @@
 </head>
 <body>
     <header class="group">
-        <h1><a href="/feed">WDI micro BLOG</a></h1>
+        <h1 class="group"><a href="/feed">WDI micro BLOG</a></h1>
             <nav class="group">
                 <ul>
                     <li><a href="/feed">Home</a></li>
                     <li><a href="/authors">Authors</a></li>
-                    <li><a href="/subscribe">Subscribe</a></li>
+                    <li><a href="/subscribe" id="third">Subscribe</a></li>
+                    <li id="search_tag">Search by tag
+                        <form action="/tag/posts" method="GET">
+                            <input type="text" name="name"
+                            placeholder="#tag">
+                        </form>
+                    </li>
                 </ul>
             </nav>        
     </header>

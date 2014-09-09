@@ -15,7 +15,13 @@
                 <ul>
                     <li><a href="/feed">Home</a></li>
                     <li><a href="/authors">Authors</a></li>
-                    <li><a href="/subscribe">Subscribe</a></li>
+                    <li><a href="/subscribe" id="third">Subscribe</a></li>
+                    <li id="search_tag">Search by tag
+                        <form action="/tag/posts" method="GET">
+                            <input type="text" name="name"
+                            placeholder="#tag">
+                        </form>
+                    </li>
                 </ul>
             </nav>        
     </header>
@@ -40,7 +46,7 @@
             </p>
             <div class="reblog">
                 <article>
-                    <h3>Reblog from <a href="/author/<%= author.id %>"><%= author.name %></a></h3>
+                    <h3 style="color: #E96462">Reblog from <a href="/author/<%= author.id %>"><%= author.name %></a></h3>
                     <p>
                         <%= content %>
                     </p>    
