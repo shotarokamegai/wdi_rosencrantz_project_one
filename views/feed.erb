@@ -63,10 +63,10 @@
         <div class="timeline group">
             <ul>
                 <% posts.each do |post| %>
-                    <div class="post">
+                    <div class="post" style="background-image: url('<%= HTTParty.get("https://api.instagram.com/v1/tags/#{post.tag_name}/media/recent?client_id=4c08eb6f8fb948d581437e9315b48fb2")["data"].sample["images"]["standard_resolution"]["url"] %>'); max-width: 100%;">
                         <h4>Created at: <%= post.created_at %></h4>
                         <li><h3><a href="/posts/<%= post.id %>"><%= post.title %></a></h3> <a href="/tag/<%= post.tag_name %>/posts"><span style="color: #E96462">#<%= post.tag_name %></span></a><br />
-                         By: <a href="/authors/<%= post.author_id %>/posts"><%= Author.find_by(id: post.author_id).name %></a>
+                         <span>By:</span> <a href="/authors/<%= post.author_id %>/posts"><%= Author.find_by(id: post.author_id).name %></a>
                         <form action="/reblog/<%= post.id %>" method="GET">
                             <button>Reblog</button>
                         </form>

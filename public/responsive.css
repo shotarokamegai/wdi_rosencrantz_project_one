@@ -240,18 +240,25 @@ textarea {
 
 	.post a {
 		font-size: 0.8em;
+		background: #B8A696;
 	}
 
 	.post h3 {
 		margin: 0;
+		background: #B8A696;
 	}
 
 	.post h3 a {
 		font-size: 1em;
+		background: #B8A696;
 	}
 
 	.post li {
 		padding: 0.5%;
+	}
+
+	.post span {
+		background: #B8A696;
 	}
 
 /******banner******/
@@ -308,6 +315,7 @@ textarea {
 
 	.list h3 {
 		display: inline;
+		font-size: 1.7em;
 	}
 
 	.list h3 a {
@@ -336,6 +344,8 @@ textarea {
 	}
 }
 
+
+
 @media screen and (max-width: 768px) {
 /******Header******/
 
@@ -346,22 +356,14 @@ textarea {
 		border-bottom: 4px solid #E9EAED;
 	}
 
-	header h1 {
-		display: block;
-		float: none;
-	}
-
 	header h1 a {
+		float: left;
 		color: #FFFF65;
-		font-size: 1.8em; 
+		font-size: 1.5em; 
 		line-height: 1.2;
 		font-weight: bold;
 		font-family: 'Oswald', sans-serif;
 		letter-spacing: 0em;
-		display: block;
-		text-align: center;
-		width: 100%;
-		margin-bottom: 2%;
 	}
 
 	header h1 a:hover {
@@ -370,7 +372,7 @@ textarea {
 	
 	header h2 {
 		display: inline;
-		font-size: 1.8em;
+		font-size: 2em;
 	}
 
 	header h3 {
@@ -380,14 +382,13 @@ textarea {
 
 	nav {
 		text-align: center;	
+		float: right;
 		margin-top: 3px;
-		width: 100%;
-		float: none;
 	}
 
 	nav ul {
-		width: 80%;
-		float: right;
+		width: 150%;
+		text-align: center;
 	}
 
 	nav ul li {
@@ -397,13 +398,12 @@ textarea {
 	}
 
 	nav ul li #third {
-		margin-right: 0.8em;
+		margin-right: 1em;
 	}
-	
 	
 	nav ul li a {
 		color: #FFFF65;
-		margin-left: 0.8em;
+		margin-left: 1em;
 	}
 
 	nav ul li a:hover {
@@ -419,7 +419,7 @@ textarea {
 	}
 
 	.submit #heading {
-		margin: -2% 0 -6% 0;
+		margin: -2% 0 -1% 0;
 	}
 
 	.submit #heading p {
@@ -450,22 +450,22 @@ textarea {
 	}
 
 	.submit #dropbox {
-		display: block;
+		display: inline;
 		margin-bottom: 10%;
 	}
 
 	.submit #author {
-		display: block;
+		display: inline;
 		padding: 3% 0;
 	}
 
 	.submit #title {
-		display: block;
+		display: inline;
 		margin-bottom: 3%;
 	}
 
 	.submit #hashtag {
-		display: block;
+		display: inline;
 		margin-bottom: 3%;
 	}
 
@@ -645,7 +645,7 @@ textarea {
 @media screen and (max-width: 657px) {
 /******Header******/
 
-	header {
+	/*header {
 		background: #000000;
 		padding: 2% 5%;
 		text-align: center;
@@ -654,7 +654,6 @@ textarea {
 
 	header h1 {
 		display: block;
-		float: none;
 	}
 
 	header h1 a {
@@ -685,15 +684,14 @@ textarea {
 	}
 
 	nav {
-		text-align: center;	
 		margin-top: 3px;
 		width: 100%;
-		float: none;
 	}
 
 	nav ul {
-		width: 90%;
+		width: 78%;
 		float: right;
+		text-align: right;
 	}
 
 	nav ul li {
@@ -714,7 +712,7 @@ textarea {
 
 	nav ul li a:hover {
 		color: #BABA4A;
-	}	
+	}	*/
 
 /******submit form******/
 
@@ -951,7 +949,7 @@ textarea {
 @media screen and (max-width: 583px) {
 /******Header******/
 
-	header {
+	/*header {
 		background: #000000;
 		padding: 2% 5%;
 		text-align: center;
@@ -1021,7 +1019,7 @@ textarea {
 	nav ul li a:hover {
 		color: #BABA4A;
 	}	
-
+*/
 /******submit form******/
 
 	.submit {

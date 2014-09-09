@@ -20,13 +20,16 @@ get('/') do
 end
 
 get('/feed') do
-	erb(:feed, { locals: { posts: Micro_post.all().reverse, authors: Author.all() }})
+	# Micro_post.create(post)
+	erb(:feed, { locals: { posts: Micro_post.all().reverse, authors: Author.all()}})
 end
 
 post('/feed') do
 	author = Author.find_by({name: params["author"]})
 	post = {"author_id" => author.id, "title" => params["title"], "content" => params["content"], "tag_name" => params["tag"], "created_at" => Time.new}
 	tag = {"name" => params["tag"]}
+
+	# image = HTTParty.get("https://api.instagram.com/v1/tags/#{params["tag"]}/media/recent?client_id=4c08eb6f8fb948d581437e9315b48fb2")["data"].sample["images"]["standard_resolution"]["url"]
 	Micro_post.create(post)
 	Tag.create(tag)
 
@@ -43,6 +46,7 @@ post('/feed') do
 # 		})
 # 	end
 
+	# erb(:feed, { locals: { posts: Micro_post.all().reverse, authors: Author.all(), image: image }})
 	redirect "/feed"
 end
 
