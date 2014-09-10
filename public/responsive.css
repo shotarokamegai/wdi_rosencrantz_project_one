@@ -364,7 +364,6 @@ textarea {
 	}
 
 	.list h3 a {
-		margin-right: 0.5em;
 		color: #E9EAED;
 	}
 
@@ -669,7 +668,6 @@ textarea {
 	}
 
 	.list h3 a {
-		margin-right: 0.5em;
 		color: #E9EAED;
 	}
 
@@ -697,6 +695,10 @@ textarea {
 @media screen and (max-width: 710px) {
 	article {
 		font-size: 40%;
+	}
+
+	.detail {
+		height: 350px;
 	}
 }
 
@@ -851,7 +853,7 @@ textarea {
 		text-align: left;
 		margin: 0 20% 5% 20%;
 		padding: 2%;
-		height: 350px;
+		height: 200px;
 		font-size: 50%;
 	}
 
@@ -978,7 +980,6 @@ textarea {
 	}
 
 	.list h3 a {
-		margin-right: 0.5em;
 		color: #E9EAED;
 	}
 
@@ -1074,17 +1075,6 @@ textarea {
 
 	.wrapper form {
 		margin-bottom: 2%;
-	}
-
-	.detail {
-		background: #E9EAED;
-		border: 2px solid #B8A696;
-		border-radius: 10px;
-		text-align: left;
-		margin: 0 20% 5% 20%;
-		padding: 2%;
-		height: 300px;
-		font-size: 40%;
 	}
 
 	.detail p {
@@ -1214,7 +1204,7 @@ textarea {
 		color: #E9EAED;
 	}
 
-	.list h6	 a:hover {
+	.list h6 a:hover {
 		color: #FFFF65;
 	}
 
