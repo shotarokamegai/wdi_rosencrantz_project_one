@@ -29,10 +29,10 @@
         <div class="banner">
             <h2></h2>
         </div>
-        <article class="detail">
-            <h3 class="date"><%= post.created_at %></h3>
-            <h2 class="title"><%= post.title %></h2>
-            <p class="content"><%= post.content %></p> 
+        <article class="detail" style="background-image: url('<%= post.image %>'); background-size: cover;">
+            <h2 class="title"><span>Title: <%= post.title %></span></h2>
+            <p class="content"><span><%= post.content %></span></p> 
+            <h6 class="date"><span>Author: <a href="/authors/<%= post.author_id %>/posts"><%= Author.find_by(id: post.author_id).name %></a></span> <span>Created at: <%= post.created_at %></span></h6>
         </article>
         <a href="/feed">Go Back</a>
     </div>

@@ -27,12 +27,12 @@
     </header>
     <div class="wrapper">
         <div class="banner">
-            <h2>Searched by #<%= posts[0].tag_name %></h2>
+            <h2>Searched by #<%= posts[0].tag_name %></span></h2>
         </div>
         <div class="list">
             <ul>
                 <% posts.each do |post| %>
-                    <li><h3><a href="/posts/<%= post.id %>"><%= post.title %></a></h3>&nbsp; By: <a href="/authors/<%= Author.find_by(id: post.author_id).id %>/posts"><%= Author.find_by(id: post.author_id).name %></a>&nbsp;&nbsp; Created at: <%= post.created_at %></span></li>
+                    <li><h3><a href="/posts/<%= post.id %>"><%= post.title %></a></h3>&nbsp; By: <a href="/authors/<%= Author.find_by(id: post.author_id).id %>/posts"><%= Author.find_by(id: post.author_id).name %></a>&nbsp;&nbsp; Created at: <%= post.created_at %></li>
                 <% end %>
             </ul>
         </div>

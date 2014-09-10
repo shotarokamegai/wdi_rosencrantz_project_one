@@ -1,11 +1,11 @@
 CREATE TABLE micro_posts (
-	id serial primary key,
-	title varchar(50),
-	content text,
-	tag_name varchar(50),
-	created_at date,
-	updated_at date
-);
+	id serial primary key, 
+	author_id integer, 
+	title varchar(50), 
+	content varchar(10000), 
+	tag_name varchar(50), 
+	created_at date, 
+	image varchar(255));
 
 CREATE TABLE authors (
 	id serial primary key,

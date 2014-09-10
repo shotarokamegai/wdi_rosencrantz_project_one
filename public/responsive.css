@@ -27,6 +27,10 @@ h3 {
 	font-size: 1.3em;
 }
 
+h6	 {
+	font-size: 1em;
+}
+
 p {
 	margin: 1.5em 0;
 }
@@ -51,6 +55,8 @@ textarea {
 
 @media screen and (max-width: 1024px) {
 
+/******General******/
+
 /******Header******/
 
 	header {
@@ -63,11 +69,11 @@ textarea {
 	header h1 a {
 		float: left;
 		color: #FFFF65;
-		font-size: 1.5em; 
+		font-size: 1.7em; 
 		line-height: 1.2;
 		font-weight: bold;
 		font-family: 'Oswald', sans-serif;
-		letter-spacing: 0em;
+		letter-spacing: -0.08em;
 	}
 
 	header h1 a:hover {
@@ -79,7 +85,7 @@ textarea {
 		font-size: 2em;
 	}
 
-	header h3 {
+	header h6	 {
 		font-size: 1.5em;
 		display: inline;
 	}
@@ -116,6 +122,10 @@ textarea {
 
 /******submit form******/
 
+	.submit_index {
+		margin-top: 9%;
+	}
+
 	.submit {
 		width: 100%;
 		margin-bottom: 1%;
@@ -135,8 +145,8 @@ textarea {
 		margin: 1% 0;
 	}
 
-	.submit #add {
-		
+	.submit #add, #title, #hashtag {
+		background: none;
 	}
 
 	.submit #dropbox {
@@ -160,12 +170,17 @@ textarea {
 
 /******wrapper******/
 
-	.wrapper h3 {
+	.wrapper h6	 {
 		margin: 2% 0;
-		/*color: #E9EAED;*/
 		width: 100%;
 		display: block;
-		/*text-align: center;*/
+	}
+
+	.wrapper h6	 span, h2 span, p span {
+		background-color: rgba(255, 255, 255, 0.8);
+		padding: 1%;
+		border-radius: 6px;
+		margin-bottom: 3%;
 	}
 
 	.wrapper form {
@@ -181,35 +196,55 @@ textarea {
 		border: 2px solid #B8A696;
 		border-radius: 10px;
 		text-align: left;
-		margin: 0 20% 5% 20%;
-		padding: 0 2% 2% 2%;
+		margin: 0 10% 5% 10%;
+		padding: 2%;
+		height: 500px;
+		font-size: 80%;
 	}
 
-	.detail p {
+	.detail article h6	.date, h2.title, p.content {
+		margin-bottom: 3%;
+		border-radius: 6px;
+	}
+
+	.detail article p.content {
+		background-color: rgba(255, 255, 255, 0.8);
+		padding: 0.1% 0.1% 7.550px 0.1%;
+		font-size: 2em;
+		border-radius: 6px;
 		margin: 0;
 	}
 
 	.title {
 		font-size: 2em;
+		margin-bottom: 2%;
 	}
 
-	.date {
-		color: #B8A696;
+	h6 .date {
 		font-size: 1.5em;
-		margin-top: 0;
+		margin: 0;
 		text-align: left;
+		margin-bottom: 1%;
+		padding: 0.1%;
+		border-radius: 6px;
 	}
 
 	.content::first-letter {
 		text-transform: capitalize;
-		font-size: 2.5em;
+		font-size: 2em;
 		color: #E96462;
+	}
+
+	p.content {
+		font-size: 1.5em;
+		margin: -4% 0 0 0;
 	}
 
 /******timeline******/
 
 	.timeline {
 		padding:0 3% 0 3%;
+		margin-bottom: 2%;
 	}
 
 	.timeline form {
@@ -228,7 +263,7 @@ textarea {
 	}
 
 	.timeline a {
-		margin-right: 1%;
+		
 	}
 
 	.post {
@@ -238,27 +273,37 @@ textarea {
 		margin-bottom: 1%;
 	}
 
-	.post a {
-		font-size: 0.8em;
-		background: #B8A696;
+	.post h4 {
+		margin-bottom: -1%;
 	}
 
-	.post h3 {
+	.post h4 span {
+		color: #E96462;
+		background-color: rgba(255, 255, 255, 0.8);
+		padding: 0.2%;
+		border-radius: 6px;
+	}
+
+	.post h3	 {
 		margin: 0;
-		background: #B8A696;
 	}
 
-	.post h3 a {
+	.post h3	 a {
 		font-size: 1em;
-		background: #B8A696;
+		background-color: rgba(255, 255, 255, 0.8);
+		padding: 0.2%;
+		border-radius: 6px;
 	}
 
-	.post li {
-		padding: 0.5%;
-	}
+/*	.post li {
+		padding: 0.2%;
+		border-radius: 6px;
+	}*/
 
 	.post span {
-		background: #B8A696;
+		background-color: rgba(255, 255, 255, 0.8);
+		padding: 0.2%;
+		border-radius: 6px;
 	}
 
 /******banner******/
@@ -278,7 +323,7 @@ textarea {
 		font-family: 'Yanone Kaffeesatz', sans-serif;
 	}
 
-	.banner h3 {
+	.banner h6	 {
 		color: #E9EAED;
 	}
 
@@ -293,7 +338,7 @@ textarea {
 		padding: 1%;
 	}
 
-	.reblog h3 {
+	.reblog h6	 {
 		margin-top: 0;
 		font-size: 1.2em;
 	}
@@ -306,7 +351,7 @@ textarea {
 /******list in authors page******/
 
 	.list {
-		text-align: left;
+		text-align: center;
 	}
 
 	.list li {
@@ -344,8 +389,6 @@ textarea {
 	}
 }
 
-
-
 @media screen and (max-width: 768px) {
 /******Header******/
 
@@ -375,7 +418,7 @@ textarea {
 		font-size: 2em;
 	}
 
-	header h3 {
+	header h3	 {
 		font-size: 1.5em;
 		display: inline;
 	}
@@ -411,6 +454,10 @@ textarea {
 	}	
 
 /******submit form******/
+
+	.submit_index {
+		margin-top: 9%;
+	}
 
 	.submit {
 		width: 100%;
@@ -469,9 +516,13 @@ textarea {
 		margin-bottom: 3%;
 	}
 
+	.subit span#hashtag {
+		color: white;
+	}
+
 /******wrapper******/
 
-	.wrapper h3 {
+	.wrapper h6	 {
 		margin: 2% 0;
 		/*color: #E96462;*/
 	}
@@ -486,11 +537,13 @@ textarea {
 		border-radius: 10px;
 		text-align: left;
 		margin: 0 20% 5% 20%;
-		padding: 0 2% 2% 2%;
+		padding: 2%;
+		height: 400px;
+		font-size: 70%;
 	}
 
 	.detail p {
-		margin: 0;
+		margin-top: 1.8%;
 	}
 
 	.title {
@@ -604,8 +657,7 @@ textarea {
 /******list in authors page******/
 
 	.list {
-		padding: 4% 0 0 20%;
-		text-align: left;
+		text-align: center;
 	}
 
 	.list li {
@@ -639,6 +691,12 @@ textarea {
 		margin: 2% 0 0 0;
 		position: absolute;
 		bottom: 0;*/
+	}
+}
+
+@media screen and (max-width: 710px) {
+	article {
+		font-size: 40%;
 	}
 }
 
@@ -678,7 +736,7 @@ textarea {
 		font-size: 1.8em;
 	}
 
-	header h3 {
+	header h6	 {
 		font-size: 1.5em;
 		display: inline;
 	}
@@ -715,6 +773,10 @@ textarea {
 	}	*/
 
 /******submit form******/
+	
+	.submit_index {
+		margin-top: 9%;
+	}
 
 	.submit {
 		width: 100%;
@@ -775,9 +837,8 @@ textarea {
 
 /******wrapper******/
 
-	.wrapper h3 {
+	.wrapper h3	 {
 		margin: 2% 0;
-		/*color: #E96462;*/
 	}
 
 	.wrapper form {
@@ -785,12 +846,13 @@ textarea {
 	}
 
 	.detail {
-		background: #E9EAED;
 		border: 2px solid #B8A696;
 		border-radius: 10px;
 		text-align: left;
 		margin: 0 20% 5% 20%;
-		padding: 0 2% 2% 2%;
+		padding: 2%;
+		height: 350px;
+		font-size: 50%;
 	}
 
 	.detail p {
@@ -906,11 +968,6 @@ textarea {
 	}
 
 /******list in authors page******/
-
-	.list {
-		padding: 4% 0 0 20%;
-		text-align: left;
-	}
 
 	.list li {
 		margin-bottom: 1em;
@@ -949,77 +1006,6 @@ textarea {
 @media screen and (max-width: 583px) {
 /******Header******/
 
-	/*header {
-		background: #000000;
-		padding: 2% 5%;
-		text-align: center;
-		border-bottom: 4px solid #E9EAED;
-	}
-
-	header h1 {
-		display: block;
-		float: none;
-	}
-
-	header h1 a {
-		color: #FFFF65;
-		font-size: 1.8em; 
-		line-height: 1.2;
-		font-weight: bold;
-		font-family: 'Oswald', sans-serif;
-		letter-spacing: 0em;
-		display: block;
-		text-align: center;
-		width: 100%;
-		margin-bottom: 2%;
-	}
-
-	header h1 a:hover {
-	
-	}
-	
-	header h2 {
-		display: inline;
-		font-size: 1.8em;
-	}
-
-	header h3 {
-		font-size: 1.5em;
-		display: inline;
-	}
-
-	nav {
-		text-align: center;	
-		margin-top: 3px;
-		width: 100%;
-		float: none;
-	}
-
-	nav ul {
-		width: 70%;
-		float: right;
-	}
-
-	nav ul li {
-		float: left;
-		list-style: none;
-		padding: 0;
-	}
-
-	nav ul li #third {
-		margin-right: 0.8em;
-	}
-	
-	
-	nav ul li a {
-		color: #FFFF65;
-		margin-left: 0.8em;
-	}
-
-	nav ul li a:hover {
-		color: #BABA4A;
-	}	
-*/
 /******submit form******/
 
 	.submit {
@@ -1096,7 +1082,9 @@ textarea {
 		border-radius: 10px;
 		text-align: left;
 		margin: 0 20% 5% 20%;
-		padding: 0 2% 2% 2%;
+		padding: 2%;
+		height: 300px;
+		font-size: 40%;
 	}
 
 	.detail p {
@@ -1186,7 +1174,7 @@ textarea {
 		font-family: 'Yanone Kaffeesatz', sans-serif;
 	}
 
-	.banner h3 {
+	.banner h6	 {
 		color: #E9EAED;
 	}
 
@@ -1213,11 +1201,6 @@ textarea {
 
 /******list in authors page******/
 
-	.list {
-		padding: 4% 0 0 20%;
-		text-align: left;
-	}
-
 	.list li {
 		margin-bottom: 1em;
 	}
@@ -1231,7 +1214,7 @@ textarea {
 		color: #E9EAED;
 	}
 
-	.list h3 a:hover {
+	.list h6	 a:hover {
 		color: #FFFF65;
 	}
 
@@ -1407,13 +1390,17 @@ textarea {
 		margin: 10% 0 7% 0;
 	}
 
+	article {
+		font-size: 35%;
+	}
+
 	.detail {
 		background: #E9EAED;
 		border: 2px solid #B8A696;
 		border-radius: 10px;
 		text-align: left;
 		margin: 0 20% 5% 20%;
-		padding: 0 2% 2% 2%;
+		padding: 2%;
 	}
 
 	.detail p {

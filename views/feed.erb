@@ -47,8 +47,8 @@
                             <% end %> 
                     </select></span>
     	        <p><span id="title">Title:
-    		        <input type="text" name="title" placeholder="Title"><s/span></p>
-    	        <p><span id="hashtag">Hashtag:    
+    		        <input type="text" name="title" placeholder="Title"></span></p>
+    	        <p><span id="hashtag">Hashtag:
                     <input type="text" name="tag" placeholder="Hashtag"></span>
     	        </p>   
             </div>
@@ -63,10 +63,10 @@
         <div class="timeline group">
             <ul>
                 <% posts.each do |post| %>
-                    <div class="post" style="background-image: url('<%= HTTParty.get("https://api.instagram.com/v1/tags/#{post.tag_name}/media/recent?client_id=4c08eb6f8fb948d581437e9315b48fb2")["data"].sample["images"]["standard_resolution"]["url"] %>'); max-width: 100%;">
-                        <h4>Created at: <%= post.created_at %></h4>
-                        <li><h3><a href="/posts/<%= post.id %>"><%= post.title %></a></h3> <a href="/tag/<%= post.tag_name %>/posts"><span style="color: #E96462">#<%= post.tag_name %></span></a><br />
-                         <span>By:</span> <a href="/authors/<%= post.author_id %>/posts"><%= Author.find_by(id: post.author_id).name %></a>
+                    <div class="post" style="background-image: url('<%= post.image %>'); max-width: 100%;">
+                        <h4><span>Created at: <%= post.created_at %></span></h4>
+                        <li><h3><a href="/posts/<%= post.id %>">&nbsp;&nbsp;&nbsp;&nbsp;<%= post.title %>&nbsp;&nbsp;&nbsp;&nbsp;</a></h3> <a href="/tag/<%= post.tag_name %>/posts"><span style="color: #E96462">#<%= post.tag_name %></span></a><br />
+                         <span>By: <a href="/authors/<%= post.author_id %>/posts"><%= Author.find_by(id: post.author_id).name %></span></a>
                         <form action="/reblog/<%= post.id %>" method="GET">
                             <button>Reblog</button>
                         </form>

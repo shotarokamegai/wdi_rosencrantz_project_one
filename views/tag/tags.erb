@@ -27,12 +27,14 @@
     </header>
     <div class="wrapper">
         <div class="banner">
-            <h2>Searched by #<%= tag %></h2>
+            <h2>Searched by <span style="color: #FFFF65;">#<%= tag %></h2>
         </div>
         <div class="list">
             <ul>
                 <% posts.each do |post| %>
-                        <li><h3><a href="/posts/<%= post.id %>"><%= post.title %></a></h3> by <a href="/tag/<%= post.tag_name %>/posts"><%= Author.find_by(id: post.author_id).name %></a></li>
+                        <li><h3><a href="/posts/<%= post.id %>"><%= post.title %></a></h3> by <a href="/tag/<%= post.tag_name %>/posts"><%= Author.find_by(id: post.author_id).name %></a>&nbsp;&nbsp;&nbsp;
+                            Created at:&nbsp;&nbsp;<%= post.created_at %>
+                        </li>
                 <% end %>
             </ul>    
         </div>

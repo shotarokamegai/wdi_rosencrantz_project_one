@@ -26,10 +26,10 @@ end
 
 post('/feed') do
 	author = Author.find_by({name: params["author"]})
-	post = {"author_id" => author.id, "title" => params["title"], "content" => params["content"], "tag_name" => params["tag"], "created_at" => Time.new}
+	image = HTTParty.get("https://api.instagram.com/v1/tags/#{params["tag"]}/media/recent?client_id=4c08eb6f8fb948d581437e9315b48fb2")["data"].sample["images"]["standard_resolution"]["url"]
+	post = {"author_id" => author.id, "title" => params["title"], "content" => params["content"], "tag_name" => params["tag"], "created_at" => Time.new, "image" => image}
 	tag = {"name" => params["tag"]}
 
-	# image = HTTParty.get("https://api.instagram.com/v1/tags/#{params["tag"]}/media/recent?client_id=4c08eb6f8fb948d581437e9315b48fb2")["data"].sample["images"]["standard_resolution"]["url"]
 	Micro_post.create(post)
 	Tag.create(tag)
 
@@ -60,7 +60,7 @@ end
 put('/post/:id') do
 	post = Micro_post.find_by(id: params[:id])
 	author = Author.find_by(id: post.author_id)
-	post_hush = {"content" => params["content"], "updated_at" => Time.now}
+	post_hush = {"content" => params["content"]}
 	post.update(post_hush)
 
 	erb(:feed, { locals: { posts: Micro_post.all(), authors: Author.all() }})
